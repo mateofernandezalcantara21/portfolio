@@ -95,9 +95,9 @@
   <!-- ============ HERO ============ -->
   <section class="max-w-6xl mx-auto px-6 md:px-8 pt-16 md:pt-24 pb-20 md:pb-28">
     <div class="flex items-center gap-4 mb-10">
-      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 ring-1 ring-ink/10 dark:ring-white/10">
+      <button id="avatar-trigger" aria-label="Ampliar foto de perfil" class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shrink-0 ring-1 ring-ink/10 dark:ring-white/10 cursor-zoom-in hover:ring-forest-600/40 dark:hover:ring-forest-100/40 transition-all">
         <img src="IMG_2134.JPEG" alt="Mateo Fernández Alcántara" class="w-full h-full object-cover">
-      </div>
+      </button>
       <div>
         <p class="font-semibold text-lg">Mateo Fernández Alcántara</p>
         <span class="inline-flex items-center mt-1 rounded-full border border-forest-600/30 dark:border-forest-100/30 text-forest-700 dark:text-forest-100 text-xs font-medium px-3 py-1">
@@ -303,6 +303,14 @@
   <p>Desplegado en Vercel</p>
 </footer>
 
+<!-- ============ LIGHTBOX FOTO DE PERFIL ============ -->
+<div id="avatar-lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center p-6 bg-ink/80 dark:bg-black/85 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Foto de perfil ampliada">
+  <button id="avatar-lightbox-close" aria-label="Cerrar" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-paper/10 hover:bg-paper/20 text-paper flex items-center justify-center transition-colors">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="IMG_2134.JPEG" alt="Mateo Fernández Alcántara" class="max-w-full max-h-full rounded-[10px] shadow-2xl">
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -324,6 +332,30 @@
     } catch (e) {
       copyLabel.textContent = email;
     }
+  });
+
+  const avatarTrigger = document.getElementById('avatar-trigger');
+  const avatarLightbox = document.getElementById('avatar-lightbox');
+  const avatarLightboxClose = document.getElementById('avatar-lightbox-close');
+
+  function openLightbox() {
+    avatarLightbox.classList.remove('hidden');
+    avatarLightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    avatarLightbox.classList.add('hidden');
+    avatarLightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  avatarTrigger.addEventListener('click', openLightbox);
+  avatarLightboxClose.addEventListener('click', closeLightbox);
+  avatarLightbox.addEventListener('click', (e) => {
+    if (e.target === avatarLightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
   });
 </script>
 
