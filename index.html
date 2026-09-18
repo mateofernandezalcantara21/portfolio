@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script>
   tailwind.config = {
@@ -17,17 +17,24 @@
     theme: {
       extend: {
         fontFamily: {
-          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          sans: ['DM Sans', 'ui-sans-serif', 'system-ui'],
+          display: ['Space Grotesk', 'DM Sans', 'ui-sans-serif'],
         },
         colors: {
-          paper: '#F7F7F4',
-          ink: '#171A1F',
+          paper: '#f4f9f6',
+          ink: '#12211b',
           forest: {
-            50: '#EEF3F0',
-            100: '#D7E3DA',
-            400: '#4C7A63',
-            600: '#2B4C3F',
-            700: '#213C32',
+            50: '#f4f9f6',
+            100: '#dbece2',
+            200: '#b6d9c6',
+            300: '#8abea3',
+            400: '#629f82',
+            500: '#488468',
+            600: '#386953',
+            700: '#2f5645',
+            800: '#2d4c3f',
+            900: '#263b32',
+            950: '#12211b',
           },
           ochre: {
             400: '#C79A44',
@@ -40,8 +47,46 @@
 </script>
 
 <style>
-  html { -webkit-font-smoothing: antialiased; }
-  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  :root {
+    --green-50: #f4f9f6; --green-100: #dbece2; --green-200: #b6d9c6;
+    --green-300: #8abea3; --green-400: #629f82; --green-500: #488468;
+    --green-600: #386953; --green-700: #2f5645; --green-800: #2d4c3f;
+    --green-900: #263b32; --green-950: #12211b;
+    --line: rgba(47, 86, 69, 0.16);
+  }
+  html { -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }
+  body { font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; background: var(--green-50); }
+  h1, h2, h3, .font-semibold { font-family: 'Space Grotesk', 'DM Sans', sans-serif; }
+  main { background: linear-gradient(180deg, var(--green-50) 0%, #ffffff 42%, var(--green-50) 100%); }
+  section[id] { scroll-margin-top: 5rem; }
+  section[id]:not(#contacto) { position: relative; }
+  section[id]:not(#contacto)::before { content: ''; position: absolute; top: 0; left: max(1.5rem, calc((100% - 72rem) / 2)); right: max(1.5rem, calc((100% - 72rem) / 2)); height: 1px; background: var(--line); }
+  header { background: rgba(18, 33, 27, 0.92) !important; border-color: rgba(219, 236, 226, 0.16) !important; }
+  header nav { max-width: 72rem; }
+  header a, header button { font-family: 'DM Sans', sans-serif; }
+  main > section:first-child { background: var(--green-950) !important; position: relative; overflow: hidden; }
+  main > section:first-child::before { content: ''; position: absolute; inset: 0; opacity: .28; pointer-events: none; background-image: linear-gradient(rgba(138,190,163,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(138,190,163,.18) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(to bottom, black, transparent 85%); }
+  main > section:first-child > div { position: relative; }
+  main > section:first-child h1 { letter-spacing: -0.055em; }
+  main > section:first-child h1::after { content: ''; display: block; width: 5rem; height: .3rem; margin-top: 1.5rem; background: var(--green-300); border-radius: 999px; }
+  main > section:first-child .ring-paper { box-shadow: 0 0 0 0.5rem rgba(138,190,163,.12); }
+  article.group { background: rgba(255,255,255,.58); border-color: var(--line) !important; border-radius: 1rem; }
+  article.group:hover { border-color: var(--green-400) !important; box-shadow: 0 1rem 2.5rem -1.5rem rgba(18,33,27,.35) !important; }
+  article.group h3 { letter-spacing: -0.025em; }
+  #articulos > div, #experiencias > div { border-color: var(--line) !important; }
+  #articulos a:hover { background: rgba(219,236,226,.48); padding-left: 1rem; padding-right: 1rem; }
+  #articulos a { transition: all .25s ease; }
+  #herramientas > div { background: var(--green-700) !important; border-radius: 1rem; box-shadow: 0 1.5rem 3rem -2rem rgba(18,33,27,.35); }
+  #herramientas > div > div { background: #fff !important; }
+  #herramientas > div > div:nth-child(2) { background: var(--green-100) !important; }
+  #herramientas > div > div:nth-child(3) { background: var(--green-200) !important; }
+  #herramientas > div > div span { background: var(--green-700) !important; color: var(--green-50) !important; }
+  #contacto > div { background: var(--green-800) !important; border-radius: 1rem; position: relative; overflow: hidden; }
+  #contacto > div::after { content: '↗'; position: absolute; right: 2.5rem; top: 1.5rem; font: 5rem/1 'Space Grotesk'; color: var(--green-300); opacity: .5; }
+  #contacto a, #contacto button { border-color: rgba(219,236,226,.25) !important; background: rgba(219,236,226,.08) !important; }
+  #contacto a:hover, #contacto button:hover { background: rgba(219,236,226,.18) !important; }
+  footer { border-color: var(--line) !important; }
+  ::selection { background: var(--green-300); color: var(--green-950); }
   .num { font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
   .underline-grow {
     background-image: linear-gradient(currentColor, currentColor);
@@ -51,7 +96,6 @@
     transition: background-size 0.35s ease;
   }
   .underline-grow:hover { background-size: 100% 1px; }
-  ::selection { background: #2B4C3F; color: #F7F7F4; }
   @media (prefers-reduced-motion: reduce) {
     * { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
   }
