@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script>
   tailwind.config = {
@@ -17,13 +17,12 @@
     theme: {
       extend: {
         fontFamily: {
-          sans: ['DM Sans', 'ui-sans-serif', 'system-ui'],
-          display: ['Space Grotesk', 'DM Sans', 'ui-sans-serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         },
         colors: {
-          paper: '#f4f9f6',
-          ink: '#12211b',
-          forest: {
+          paper: '#F7F7F4',
+          ink: '#171A1F',
+          'te-papa-green': {
             50: '#f4f9f6',
             100: '#dbece2',
             200: '#b6d9c6',
@@ -36,10 +35,6 @@
             900: '#263b32',
             950: '#12211b',
           },
-          ochre: {
-            400: '#C79A44',
-            500: '#B0842F',
-          },
         },
       },
     },
@@ -47,46 +42,8 @@
 </script>
 
 <style>
-  :root {
-    --green-50: #f4f9f6; --green-100: #dbece2; --green-200: #b6d9c6;
-    --green-300: #8abea3; --green-400: #629f82; --green-500: #488468;
-    --green-600: #386953; --green-700: #2f5645; --green-800: #2d4c3f;
-    --green-900: #263b32; --green-950: #12211b;
-    --line: rgba(47, 86, 69, 0.16);
-  }
-  html { -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }
-  body { font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; background: var(--green-50); }
-  h1, h2, h3, .font-semibold { font-family: 'Space Grotesk', 'DM Sans', sans-serif; }
-  main { background: linear-gradient(180deg, var(--green-50) 0%, #ffffff 42%, var(--green-50) 100%); }
-  section[id] { scroll-margin-top: 5rem; }
-  section[id]:not(#contacto) { position: relative; }
-  section[id]:not(#contacto)::before { content: ''; position: absolute; top: 0; left: max(1.5rem, calc((100% - 72rem) / 2)); right: max(1.5rem, calc((100% - 72rem) / 2)); height: 1px; background: var(--line); }
-  header { background: rgba(18, 33, 27, 0.92) !important; border-color: rgba(219, 236, 226, 0.16) !important; }
-  header nav { max-width: 72rem; }
-  header a, header button { font-family: 'DM Sans', sans-serif; }
-  main > section:first-child { background: var(--green-950) !important; position: relative; overflow: hidden; }
-  main > section:first-child::before { content: ''; position: absolute; inset: 0; opacity: .28; pointer-events: none; background-image: linear-gradient(rgba(138,190,163,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(138,190,163,.18) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(to bottom, black, transparent 85%); }
-  main > section:first-child > div { position: relative; }
-  main > section:first-child h1 { letter-spacing: -0.055em; }
-  main > section:first-child h1::after { content: ''; display: block; width: 5rem; height: .3rem; margin-top: 1.5rem; background: var(--green-300); border-radius: 999px; }
-  main > section:first-child .ring-paper { box-shadow: 0 0 0 0.5rem rgba(138,190,163,.12); }
-  article.group { background: rgba(255,255,255,.58); border-color: var(--line) !important; border-radius: 1rem; }
-  article.group:hover { border-color: var(--green-400) !important; box-shadow: 0 1rem 2.5rem -1.5rem rgba(18,33,27,.35) !important; }
-  article.group h3 { letter-spacing: -0.025em; }
-  #articulos > div, #experiencias > div { border-color: var(--line) !important; }
-  #articulos a:hover { background: rgba(219,236,226,.48); padding-left: 1rem; padding-right: 1rem; }
-  #articulos a { transition: all .25s ease; }
-  #herramientas > div { background: var(--green-700) !important; border-radius: 1rem; box-shadow: 0 1.5rem 3rem -2rem rgba(18,33,27,.35); }
-  #herramientas > div > div { background: #fff !important; }
-  #herramientas > div > div:nth-child(2) { background: var(--green-100) !important; }
-  #herramientas > div > div:nth-child(3) { background: var(--green-200) !important; }
-  #herramientas > div > div span { background: var(--green-700) !important; color: var(--green-50) !important; }
-  #contacto > div { background: var(--green-800) !important; border-radius: 1rem; position: relative; overflow: hidden; }
-  #contacto > div::after { content: '↗'; position: absolute; right: 2.5rem; top: 1.5rem; font: 5rem/1 'Space Grotesk'; color: var(--green-300); opacity: .5; }
-  #contacto a, #contacto button { border-color: rgba(219,236,226,.25) !important; background: rgba(219,236,226,.08) !important; }
-  #contacto a:hover, #contacto button:hover { background: rgba(219,236,226,.18) !important; }
-  footer { border-color: var(--line) !important; }
-  ::selection { background: var(--green-300); color: var(--green-950); }
+  html { -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
   .num { font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
   .underline-grow {
     background-image: linear-gradient(currentColor, currentColor);
@@ -96,16 +53,17 @@
     transition: background-size 0.35s ease;
   }
   .underline-grow:hover { background-size: 100% 1px; }
+  ::selection { background: #2B4C3F; color: #F7F7F4; }
   @media (prefers-reduced-motion: reduce) {
     * { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
   }
 </style>
 </head>
 
-<body class="bg-paper text-ink dark:bg-[#12151B] dark:text-[#EDEEEA] transition-colors duration-300">
+<body class="bg-paper text-ink dark:bg-[#12211b] dark:text-[#dbece2] transition-colors duration-300">
 
 <!-- ============ NAVBAR ============ -->
-<header class="fixed top-0 inset-x-0 z-50 border-b border-paper/15 bg-forest-400/95 backdrop-blur-md">
+<header class="fixed top-0 inset-x-0 z-50 border-b border-paper/15 bg-te-papa-green-400/95 backdrop-blur-md">
   <nav class="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
     <a href="#" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
       <span class="w-8 h-8 rounded-full overflow-hidden ring-1 ring-paper/40 shrink-0">
@@ -129,7 +87,7 @@
         <svg id="icon-moon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
       </button>
       <a href="https://www.linkedin.com/in/mateo-fernandez-alcantara" target="_blank" rel="noopener"
-         class="hidden sm:inline-flex items-center gap-2 rounded-[6px] bg-forest-600 text-paper text-sm font-medium px-4 py-2 hover:opacity-85 transition-opacity">
+         class="hidden sm:inline-flex items-center gap-2 rounded-[6px] bg-te-papa-green-600 text-paper text-sm font-medium px-4 py-2 hover:opacity-85 transition-opacity">
         Conectar en LinkedIn
       </a>
     </div>
@@ -139,7 +97,7 @@
 <main>
 
   <!-- ============ HERO ============ -->
-  <section class="bg-forest-600 dark:bg-forest-700 text-paper">
+  <section class="bg-te-papa-green-600 dark:bg-te-papa-green-700 text-paper">
     <div class="max-w-6xl mx-auto px-6 md:px-8 pt-32 md:pt-40 pb-20 md:pb-28">
       <div class="flex items-center gap-4 mb-10">
         <button id="avatar-trigger" aria-label="Ampliar foto de perfil" class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shrink-0 ring-4 ring-paper hover:ring-paper/70 transition-all">
@@ -167,7 +125,7 @@
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-4">
-        <a href="#casos" class="rounded-[6px] bg-paper text-forest-600 text-sm font-medium px-5 py-2.5 hover:opacity-85 transition-opacity">
+        <a href="#casos" class="rounded-[6px] bg-paper text-te-papa-green-600 text-sm font-medium px-5 py-2.5 hover:opacity-85 transition-opacity">
           Ver casos de análisis
         </a>
         <a href="#contacto" class="text-sm font-medium text-paper/85 underline-grow hover:text-paper transition-colors">
@@ -187,7 +145,7 @@
     <div class="grid md:grid-cols-3 gap-6">
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Marca</span>
+        <span class="text-xs font-medium text-te-papa-green-600 dark:text-te-papa-green-100">Marca</span>
         <h3 class="mt-3 text-lg font-semibold leading-snug">Cómo Mercadona construye una marca low cost sin parecer barata</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
           Arquitectura de marca blanca, señales de calidad y precio percibido en un modelo
@@ -198,7 +156,7 @@
       </article>
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Fenómeno</span>
+        <span class="text-xs font-medium text-te-papa-green-600 dark:text-te-papa-green-100">Fenómeno</span>
         <h3 class="mt-3 text-lg font-semibold leading-snug">El resurgir de las cámaras compactas: ¿nostalgia o algo más?</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
           Por qué una generación que nunca reveló un carrete está comprando cámaras
@@ -209,7 +167,7 @@
       </article>
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Campaña</span>
+        <span class="text-xs font-medium text-te-papa-green-600 dark:text-te-papa-green-100">Campaña</span>
         <h3 class="mt-3 text-lg font-semibold leading-snug">Humor como estrategia: el caso de las campañas de Mahou</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
           Cómo una marca de cerveza generalista usa el humor cotidiano para mantenerse
@@ -231,7 +189,7 @@
       <a href="articulo-marketing-la-actividad-mas-humana.html" class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6">
         <span class="text-xs text-ink/45 dark:text-white/45 num shrink-0 w-32">10 sep 2026 · 4 min</span>
         <div class="flex-1">
-          <h3 class="font-medium leading-snug group-hover:text-forest-600 dark:group-hover:text-forest-100 transition-colors">
+          <h3 class="font-medium leading-snug group-hover:text-te-papa-green-600 dark:group-hover:text-te-papa-green-100 transition-colors">
             Marketing, la actividad más humana
           </h3>
           <p class="mt-1 text-sm text-ink/55 dark:text-white/55 leading-relaxed max-w-2xl">
@@ -243,7 +201,7 @@
       <a href="#" class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6">
         <span class="text-xs text-ink/45 dark:text-white/45 num shrink-0 w-32">12 ago 2026 · 6 min</span>
         <div class="flex-1">
-          <h3 class="font-medium leading-snug group-hover:text-forest-600 dark:group-hover:text-forest-100 transition-colors">
+          <h3 class="font-medium leading-snug group-hover:text-te-papa-green-600 dark:group-hover:text-te-papa-green-100 transition-colors">
             Por qué el efecto señuelo explica el éxito de las tarifas de streaming
           </h3>
           <p class="mt-1 text-sm text-ink/55 dark:text-white/55 leading-relaxed max-w-2xl">
@@ -256,7 +214,7 @@
       <a href="#" class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6">
         <span class="text-xs text-ink/45 dark:text-white/45 num shrink-0 w-32">28 jul 2026 · 8 min</span>
         <div class="flex-1">
-          <h3 class="font-medium leading-snug group-hover:text-forest-600 dark:group-hover:text-forest-100 transition-colors">
+          <h3 class="font-medium leading-snug group-hover:text-te-papa-green-600 dark:group-hover:text-te-papa-green-100 transition-colors">
             Inflación y cesta de la compra: qué dice el IPC de julio del consumo en España
           </h3>
           <p class="mt-1 text-sm text-ink/55 dark:text-white/55 leading-relaxed max-w-2xl">
@@ -269,7 +227,7 @@
       <a href="#" class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6">
         <span class="text-xs text-ink/45 dark:text-white/45 num shrink-0 w-32">03 jul 2026 · 5 min</span>
         <div class="flex-1">
-          <h3 class="font-medium leading-snug group-hover:text-forest-600 dark:group-hover:text-forest-100 transition-colors">
+          <h3 class="font-medium leading-snug group-hover:text-te-papa-green-600 dark:group-hover:text-te-papa-green-100 transition-colors">
             La psicología detrás de las rebajas de enero
           </h3>
           <p class="mt-1 text-sm text-ink/55 dark:text-white/55 leading-relaxed max-w-2xl">
@@ -286,31 +244,37 @@
   <section id="herramientas" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
     <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Herramientas y habilidades</h2>
 
-    <div class="grid md:grid-cols-3 gap-px bg-ink/10 dark:bg-white/10 rounded-[10px] overflow-hidden">
+    <div class="flex flex-col gap-4 md:gap-5 max-w-3xl">
 
-      <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">A</span>
-        <h3 class="mt-5 font-semibold">Análisis cuantitativo & datos</h3>
-        <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Herramientas de datos: Excel avanzado, SPSS, nociones de R y SQL.
-        </p>
+      <div class="flex items-center gap-6 rounded-2xl border border-te-papa-green-100 bg-te-papa-green-600 p-6 md:p-7">
+        <span class="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] rounded-full border-2 border-paper flex items-center justify-center text-paper font-bold text-2xl shrink-0">A</span>
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold text-paper">Análisis cuantitativo & datos</h3>
+          <p class="mt-1 text-sm text-paper/75 leading-relaxed">
+            Herramientas de datos: Excel avanzado, SPSS, nociones de R y SQL.
+          </p>
+        </div>
       </div>
 
-      <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">I</span>
-        <h3 class="mt-5 font-semibold">Investigación cualitativa</h3>
-        <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Diseño de encuestas, entrevistas en profundidad y observación del consumidor.
-        </p>
+      <div class="flex items-center gap-6 rounded-2xl border border-te-papa-green-100 bg-te-papa-green-600 p-6 md:p-7">
+        <span class="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] rounded-full border-2 border-paper flex items-center justify-center text-paper font-bold text-2xl shrink-0">I</span>
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold text-paper">Investigación cualitativa</h3>
+          <p class="mt-1 text-sm text-paper/75 leading-relaxed">
+            Diseño de encuestas, entrevistas en profundidad y observación del consumidor.
+          </p>
+        </div>
       </div>
 
-      <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">H</span>
-        <h3 class="mt-5 font-semibold">Habilidades blandas</h3>
-        <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Liderazgo, pensamiento crítico frente al dato, comunicación, narrativa estructurada
-          (storytelling) y adaptabilidad tecnológica.
-        </p>
+      <div class="flex items-center gap-6 rounded-2xl border border-te-papa-green-100 bg-te-papa-green-600 p-6 md:p-7">
+        <span class="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] rounded-full border-2 border-paper flex items-center justify-center text-paper font-bold text-2xl shrink-0">H</span>
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold text-paper">Habilidades blandas</h3>
+          <p class="mt-1 text-sm text-paper/75 leading-relaxed">
+            Liderazgo, pensamiento crítico frente al dato, comunicación, narrativa estructurada
+            (storytelling) y adaptabilidad tecnológica.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -318,40 +282,28 @@
 
   <!-- ============ EXPERIENCIAS ============ -->
   <section id="experiencias" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
-    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Experiencias</h2>
+    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Experiencias</h2>
 
-    <div class="divide-y divide-ink/10 dark:divide-white/10 border-t border-b border-ink/10 dark:border-white/10">
+    <div class="grid grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
 
-      <div class="flex items-baseline gap-4 py-5">
-        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
-        <p class="text-sm md:text-base">
-          <span class="font-medium">Erasmus+</span>
-          <span class="text-ink/50 dark:text-white/50"> — Proyecto SHARKS (Sostenibilidad)</span>
-        </p>
+      <div class="aspect-square rounded-2xl border-2 border-te-papa-green-400 bg-te-papa-green-600 p-6 md:p-8 flex flex-col justify-center text-center">
+        <p class="text-xl md:text-2xl font-bold text-paper leading-tight">Erasmus+</p>
+        <p class="mt-2 text-xs md:text-sm text-paper leading-snug">(Proyecto SHARKS · Sostenibilidad)</p>
       </div>
 
-      <div class="flex items-baseline gap-4 py-5">
-        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
-        <p class="text-sm md:text-base">
-          <span class="font-medium">Voluntariado AokLabs</span>
-          <span class="text-ink/50 dark:text-white/50"> — Proyecto Anza</span>
-        </p>
+      <div class="aspect-square rounded-2xl border-2 border-te-papa-green-400 bg-te-papa-green-600 p-6 md:p-8 flex flex-col justify-center text-center">
+        <p class="text-xl md:text-2xl font-bold text-paper leading-tight">Voluntariado</p>
+        <p class="mt-2 text-xs md:text-sm text-paper leading-snug">(AokLabs · Proyecto Anza)</p>
       </div>
 
-      <div class="flex items-baseline gap-4 py-5">
-        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
-        <p class="text-sm md:text-base">
-          <span class="font-medium">Becario</span>
-          <span class="text-ink/50 dark:text-white/50"> — Proyecto Sputnik</span>
-        </p>
+      <div class="aspect-square rounded-2xl border-2 border-te-papa-green-400 bg-te-papa-green-600 p-6 md:p-8 flex flex-col justify-center text-center">
+        <p class="text-xl md:text-2xl font-bold text-paper leading-tight">Becario</p>
+        <p class="mt-2 text-xs md:text-sm text-paper leading-snug">(Proyecto Sputnik)</p>
       </div>
 
-      <div class="flex items-baseline gap-4 py-5">
-        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
-        <p class="text-sm md:text-base">
-          <span class="font-medium">Creator content</span>
-          <span class="text-ink/50 dark:text-white/50"> — Pedacitos de Pasión (redes sociales)</span>
-        </p>
+      <div class="aspect-square rounded-2xl border-2 border-te-papa-green-400 bg-te-papa-green-600 p-6 md:p-8 flex flex-col justify-center text-center">
+        <p class="text-xl md:text-2xl font-bold text-paper leading-tight">Creator</p>
+        <p class="mt-2 text-xs md:text-sm text-paper leading-snug">(Pedacitos de Pasión · Redes sociales)</p>
       </div>
 
     </div>
@@ -364,7 +316,7 @@
     <div class="grid md:grid-cols-2 gap-10">
 
       <div>
-        <p class="text-xs font-medium text-forest-600 dark:text-forest-100 mb-4">Libros</p>
+        <p class="text-xs font-medium text-te-papa-green-600 dark:text-te-papa-green-100 mb-4">Libros</p>
         <ul class="space-y-4">
           <li class="pb-4 border-b border-ink/10 dark:border-white/10">
             <p class="font-medium text-sm">Pensar rápido, pensar despacio</p>
@@ -386,7 +338,7 @@
       </div>
 
       <div>
-        <p class="text-xs font-medium text-forest-600 dark:text-forest-100 mb-4">Creadores y fuentes de referencia</p>
+        <p class="text-xs font-medium text-te-papa-green-600 dark:text-te-papa-green-100 mb-4">Creadores y fuentes de referencia</p>
         <ul class="space-y-4">
           <li class="pb-4 border-b border-ink/10 dark:border-white/10">
             <p class="font-medium text-sm">Rory Sutherland</p>
@@ -412,11 +364,11 @@
 
   <!-- ============ CONTACTO ============ -->
   <section id="contacto" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-28 border-t border-ink/10 dark:border-white/10">
-    <div class="rounded-[14px] bg-forest-600 dark:bg-forest-700 text-paper px-8 py-14 md:px-14 md:py-16">
+    <div class="rounded-[14px] bg-te-papa-green-600 dark:bg-te-papa-green-700 text-paper px-8 py-14 md:px-14 md:py-16">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight max-w-lg leading-[1.1]">
         Hablemos de tu próxima oportunidad o colaboración.
       </h2>
-      <p class="mt-4 text-forest-50/80 max-w-md leading-relaxed">
+      <p class="mt-4 text-te-papa-green-50/80 max-w-md leading-relaxed">
         Abierta a prácticas, proyectos de investigación y colaboraciones en marketing,
         economía del consumo y análisis de mercados.
       </p>
@@ -426,25 +378,25 @@
         <a href="https://www.linkedin.com/in/mateo-fernandez-alcantara" target="_blank" rel="noopener"
            class="rounded-[8px] bg-paper/10 hover:bg-paper/15 border border-paper/15 px-4 py-4 transition-colors">
           <p class="text-sm font-medium">LinkedIn</p>
-          <p class="text-xs text-forest-50/60 mt-1">/in/mateo-fernandez-alcantara</p>
+          <p class="text-xs text-te-papa-green-50/60 mt-1">/in/mateo-fernandez-alcantara</p>
         </a>
 
         <a href="https://www.instagram.com/mateo.fdez.alcantara" target="_blank" rel="noopener"
            class="rounded-[8px] bg-paper/10 hover:bg-paper/15 border border-paper/15 px-4 py-4 transition-colors">
           <p class="text-sm font-medium">Instagram</p>
-          <p class="text-xs text-forest-50/60 mt-1">@mateo.fdez.alcantara</p>
+          <p class="text-xs text-te-papa-green-50/60 mt-1">@mateo.fdez.alcantara</p>
         </a>
 
         <a href="https://www.youtube.com/@mateofernandezalcantara" target="_blank" rel="noopener"
            class="rounded-[8px] bg-paper/10 hover:bg-paper/15 border border-paper/15 px-4 py-4 transition-colors">
           <p class="text-sm font-medium">YouTube</p>
-          <p class="text-xs text-forest-50/60 mt-1">Proyección audiovisual</p>
+          <p class="text-xs text-te-papa-green-50/60 mt-1">Proyección audiovisual</p>
         </a>
 
         <button id="copy-email" data-email="mateofernandezalcantara@gmail.com"
            class="text-left rounded-[8px] bg-paper/10 hover:bg-paper/15 border border-paper/15 px-4 py-4 transition-colors">
           <p class="text-sm font-medium" id="copy-email-label">Copiar email</p>
-          <p class="text-xs text-forest-50/60 mt-1">mateofernandezalcantara@gmail.com</p>
+          <p class="text-xs text-te-papa-green-50/60 mt-1">mateofernandezalcantara@gmail.com</p>
         </button>
 
       </div>
