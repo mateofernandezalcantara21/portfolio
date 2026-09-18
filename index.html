@@ -61,29 +61,31 @@
 <body class="bg-paper text-ink dark:bg-[#12151B] dark:text-[#EDEEEA] transition-colors duration-300">
 
 <!-- ============ NAVBAR ============ -->
-<header class="fixed top-0 inset-x-0 z-50 border-b border-ink/10 dark:border-white/10 bg-paper/80 dark:bg-[#12151B]/80 backdrop-blur-md">
+<header class="fixed top-0 inset-x-0 z-50 border-b border-paper/15 bg-forest-400/95 backdrop-blur-md">
   <nav class="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
     <a href="#" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
-      <span class="w-8 h-8 rounded-full overflow-hidden ring-1 ring-ink/10 dark:ring-white/10 shrink-0">
+      <span class="w-8 h-8 rounded-full overflow-hidden ring-1 ring-paper/40 shrink-0">
         <img src="IMG_2134.JPEG" alt="Mateo Fernández Alcántara" class="w-full h-full object-cover">
       </span>
-      <span class="hidden sm:inline text-sm font-medium tracking-tight">Mateo Fernández Alcántara</span>
+      <span class="hidden sm:inline text-sm font-medium tracking-tight text-paper">Mateo Fernández Alcántara</span>
     </a>
 
-    <div class="hidden md:flex items-center gap-8 text-sm text-ink/70 dark:text-white/70">
-      <a href="#proyectos" class="underline-grow hover:text-ink dark:hover:text-white transition-colors">Proyectos</a>
-      <a href="#articulos" class="underline-grow hover:text-ink dark:hover:text-white transition-colors">Artículos</a>
-      <a href="#metodologia" class="underline-grow hover:text-ink dark:hover:text-white transition-colors">Metodología</a>
-      <a href="#contacto" class="underline-grow hover:text-ink dark:hover:text-white transition-colors">Contacto</a>
+    <div class="hidden md:flex items-center gap-6 lg:gap-7 text-sm text-paper/85">
+      <a href="#casos" class="underline-grow hover:text-paper transition-colors">Casos</a>
+      <a href="#articulos" class="underline-grow hover:text-paper transition-colors">Artículos</a>
+      <a href="#herramientas" class="underline-grow hover:text-paper transition-colors">Herramientas</a>
+      <a href="#experiencias" class="underline-grow hover:text-paper transition-colors">Experiencias</a>
+      <a href="#lecturas" class="underline-grow hover:text-paper transition-colors">Lecturas</a>
+      <a href="#contacto" class="underline-grow hover:text-paper transition-colors">Contacto</a>
     </div>
 
     <div class="flex items-center gap-3">
-      <button id="theme-toggle" aria-label="Cambiar tema" class="w-9 h-9 rounded-[6px] border border-ink/15 dark:border-white/15 flex items-center justify-center text-ink/60 dark:text-white/60 hover:text-ink dark:hover:text-white hover:border-ink/30 dark:hover:border-white/30 transition-colors">
+      <button id="theme-toggle" aria-label="Cambiar tema" class="w-9 h-9 rounded-[6px] border border-paper/25 flex items-center justify-center text-paper/70 hover:text-paper hover:border-paper/45 transition-colors">
         <svg id="icon-sun" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg id="icon-moon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
       </button>
       <a href="https://www.linkedin.com/in/mateo-fernandez-alcantara" target="_blank" rel="noopener"
-         class="hidden sm:inline-flex items-center gap-2 rounded-[6px] bg-ink dark:bg-white text-paper dark:text-ink text-sm font-medium px-4 py-2 hover:opacity-85 transition-opacity">
+         class="hidden sm:inline-flex items-center gap-2 rounded-[6px] bg-forest-600 text-paper text-sm font-medium px-4 py-2 hover:opacity-85 transition-opacity">
         Conectar en LinkedIn
       </a>
     </div>
@@ -96,11 +98,11 @@
   <section class="bg-forest-600 dark:bg-forest-700 text-paper">
     <div class="max-w-6xl mx-auto px-6 md:px-8 pt-32 md:pt-40 pb-20 md:pb-28">
       <div class="flex items-center gap-4 mb-10">
-        <button id="avatar-trigger" aria-label="Ampliar foto de perfil" class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shrink-0 ring-2 ring-paper hover:ring-paper/70 transition-all">
+        <button id="avatar-trigger" aria-label="Ampliar foto de perfil" class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shrink-0 ring-4 ring-paper hover:ring-paper/70 transition-all">
           <img src="IMG_2134.JPEG" alt="Mateo Fernández Alcántara" class="w-full h-full object-cover">
         </button>
         <div>
-          <p class="font-semibold text-lg text-paper">Mateo Fernández Alcántara</p>
+          <p class="font-semibold text-2xl text-paper">Mateo Fernández Alcántara</p>
           <span class="inline-flex items-center mt-1 rounded-full border border-paper/40 text-paper text-xs font-medium px-3 py-1">
             Estudiante de Marketing e Investigación de Mercados
           </span>
@@ -121,8 +123,8 @@
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-4">
-        <a href="#proyectos" class="rounded-[6px] bg-paper text-forest-600 text-sm font-medium px-5 py-2.5 hover:opacity-85 transition-opacity">
-          Ver proyectos
+        <a href="#casos" class="rounded-[6px] bg-paper text-forest-600 text-sm font-medium px-5 py-2.5 hover:opacity-85 transition-opacity">
+          Ver casos de análisis
         </a>
         <a href="#contacto" class="text-sm font-medium text-paper/85 underline-grow hover:text-paper transition-colors">
           Hablemos de una colaboración
@@ -131,46 +133,46 @@
     </div>
   </section>
 
-  <!-- ============ PROYECTOS ============ -->
-  <section id="proyectos" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
+  <!-- ============ ANÁLISIS DE CASOS Y MERCADO ============ -->
+  <section id="casos" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
     <div class="flex items-end justify-between gap-6 mb-12">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Proyectos e investigaciones</h2>
-      <p class="hidden md:block text-sm text-ink/50 dark:text-white/50 max-w-xs text-right">Estudios propios de investigación de mercado, con datos y metodología documentados.</p>
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Análisis de casos y mercado</h2>
+      <p class="hidden md:block text-sm text-ink/50 dark:text-white/50 max-w-xs text-right">Disecciones propias de marcas y fenómenos de consumo actuales.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Econometría</span>
-        <h3 class="mt-3 text-lg font-semibold leading-snug">Elasticidad precio-demanda en bebidas energéticas</h3>
+        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Marca</span>
+        <h3 class="mt-3 text-lg font-semibold leading-snug">Cómo Mercadona construye una marca low cost sin parecer barata</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
-          Estimación de la sensibilidad al precio en el sector de bebidas energéticas en España
-          entre 2019 y 2024, y su relación con las campañas promocionales del sector.
+          Arquitectura de marca blanca, señales de calidad y precio percibido en un modelo
+          que evita competir por ser el más barato de la estantería.
         </p>
-        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Datos de panel · modelo de efectos fijos · Stata</p>
-        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer estudio</a>
+        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Posicionamiento · arquitectura de marca</p>
+        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer análisis</a>
       </article>
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Comportamiento del consumidor</span>
-        <h3 class="mt-3 text-lg font-semibold leading-snug">El efecto ancla en el e-commerce de moda</h3>
+        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Fenómeno</span>
+        <h3 class="mt-3 text-lg font-semibold leading-snug">El resurgir de las cámaras compactas: ¿nostalgia o algo más?</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
-          Diseño experimental sobre cómo el precio original tachado condiciona la percepción
-          de valor y la intención de compra en tiendas online de moda.
+          Por qué una generación que nunca reveló un carrete está comprando cámaras
+          digitales de hace veinte años, y qué dice esto de su relación con las redes.
         </p>
-        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Experimento A/B · n = 340 · SPSS, ANOVA</p>
-        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer estudio</a>
+        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Tendencias de consumo · cultura digital</p>
+        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer análisis</a>
       </article>
 
       <article class="group rounded-[10px] border border-ink/10 dark:border-white/10 p-6 flex flex-col hover:shadow-[0_8px_30px_-12px_rgba(23,26,31,0.15)] hover:-translate-y-0.5 transition-all duration-300">
-        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Investigación de mercado</span>
-        <h3 class="mt-3 text-lg font-semibold leading-snug">Arquitectura de precios en el café de especialidad</h3>
+        <span class="text-xs font-medium text-forest-600 dark:text-forest-100">Campaña</span>
+        <h3 class="mt-3 text-lg font-semibold leading-snug">Humor como estrategia: el caso de las campañas de Mahou</h3>
         <p class="mt-3 text-sm text-ink/60 dark:text-white/60 leading-relaxed flex-1">
-          Mapa de percepción de marca y análisis conjoint sobre disposición a pagar en el
-          mercado de cafeterías de especialidad de Sevilla.
+          Cómo una marca de cerveza generalista usa el humor cotidiano para mantenerse
+          relevante en un mercado saturado de mensajes casi idénticos.
         </p>
-        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Entrevistas en profundidad · análisis conjoint</p>
-        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer estudio</a>
+        <p class="mt-4 text-xs text-ink/45 dark:text-white/45 num">Análisis de campaña · comunicación</p>
+        <a href="#" class="mt-5 inline-flex text-sm font-medium text-ink dark:text-white underline-grow w-fit">Leer análisis</a>
       </article>
 
     </div>
@@ -236,37 +238,129 @@
     </div>
   </section>
 
-  <!-- ============ METODOLOGÍA ============ -->
-  <section id="metodologia" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
-    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Metodología y enfoque analítico</h2>
+  <!-- ============ HERRAMIENTAS Y HABILIDADES ============ -->
+  <section id="herramientas" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Herramientas y habilidades</h2>
 
     <div class="grid md:grid-cols-3 gap-px bg-ink/10 dark:bg-white/10 rounded-[10px] overflow-hidden">
 
       <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">R</span>
-        <h3 class="mt-5 font-semibold">Rigor analítico</h3>
+        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">A</span>
+        <h3 class="mt-5 font-semibold">Análisis cuantitativo & datos</h3>
         <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Transformo datos dispersos en insights accionables, validando cada hallazgo con
-          métodos estadísticos apropiados antes de sacar conclusiones.
+          Herramientas de datos: Excel avanzado, SPSS, nociones de R y SQL.
         </p>
       </div>
 
       <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">C</span>
-        <h3 class="mt-5 font-semibold">Comportamiento & psicología</h3>
+        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">I</span>
+        <h3 class="mt-5 font-semibold">Investigación cualitativa</h3>
         <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Entiendo el proceso de decisión de compra más allá del precio: los sesgos, los
-          contextos y las emociones que lo condicionan.
+          Diseño de encuestas, entrevistas en profundidad y observación del consumidor.
         </p>
       </div>
 
       <div class="bg-paper dark:bg-[#12151B] p-7">
-        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">S</span>
-        <h3 class="mt-5 font-semibold">Storytelling visual</h3>
+        <span class="w-9 h-9 rounded-[6px] bg-forest-50 dark:bg-white/5 text-forest-600 dark:text-forest-100 flex items-center justify-center font-semibold">H</span>
+        <h3 class="mt-5 font-semibold">Habilidades blandas</h3>
         <p class="mt-2 text-sm text-ink/60 dark:text-white/60 leading-relaxed">
-          Comunico conceptos complejos con claridad, para que un hallazgo estadístico se
-          entienda tan bien como se calcula.
+          Liderazgo, pensamiento crítico frente al dato, comunicación, narrativa estructurada
+          (storytelling) y adaptabilidad tecnológica.
         </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCIAS ============ -->
+  <section id="experiencias" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Experiencias</h2>
+
+    <div class="divide-y divide-ink/10 dark:divide-white/10 border-t border-b border-ink/10 dark:border-white/10">
+
+      <div class="flex items-baseline gap-4 py-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
+        <p class="text-sm md:text-base">
+          <span class="font-medium">Erasmus+</span>
+          <span class="text-ink/50 dark:text-white/50"> — Proyecto SHARKS (Sostenibilidad)</span>
+        </p>
+      </div>
+
+      <div class="flex items-baseline gap-4 py-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
+        <p class="text-sm md:text-base">
+          <span class="font-medium">Voluntariado AokLabs</span>
+          <span class="text-ink/50 dark:text-white/50"> — Proyecto Anza</span>
+        </p>
+      </div>
+
+      <div class="flex items-baseline gap-4 py-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
+        <p class="text-sm md:text-base">
+          <span class="font-medium">Becario</span>
+          <span class="text-ink/50 dark:text-white/50"> — Proyecto Sputnik</span>
+        </p>
+      </div>
+
+      <div class="flex items-baseline gap-4 py-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-forest-600 dark:bg-forest-100 shrink-0"></span>
+        <p class="text-sm md:text-base">
+          <span class="font-medium">Creator content</span>
+          <span class="text-ink/50 dark:text-white/50"> — Pedacitos de Pasión (redes sociales)</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ LECTURAS Y FUENTES ============ -->
+  <section id="lecturas" class="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-24 border-t border-ink/10 dark:border-white/10">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-12">Lecturas y fuentes</h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div>
+        <p class="text-xs font-medium text-forest-600 dark:text-forest-100 mb-4">Libros</p>
+        <ul class="space-y-4">
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Pensar rápido, pensar despacio</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Daniel Kahneman</p>
+          </li>
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Predictably Irrational</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Dan Ariely</p>
+          </li>
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Contagious: Why Things Catch On</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Jonah Berger</p>
+          </li>
+          <li>
+            <p class="font-medium text-sm">Influence: The Psychology of Persuasion</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Robert Cialdini</p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-medium text-forest-600 dark:text-forest-100 mb-4">Creadores y fuentes de referencia</p>
+        <ul class="space-y-4">
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Rory Sutherland</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Vicepresidente de Ogilvy · economía conductual aplicada al marketing</p>
+          </li>
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Byron Sharp</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Ehrenberg-Bass Institute · "How Brands Grow"</p>
+          </li>
+          <li class="pb-4 border-b border-ink/10 dark:border-white/10">
+            <p class="font-medium text-sm">Marketing4Food</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Newsletter sobre estrategia y consumo en gran distribución</p>
+          </li>
+          <li>
+            <p class="font-medium text-sm">Harvard Business Review</p>
+            <p class="text-xs text-ink/50 dark:text-white/50 mt-0.5">Artículos de estrategia de marca y comportamiento del consumidor</p>
+          </li>
+        </ul>
       </div>
 
     </div>
